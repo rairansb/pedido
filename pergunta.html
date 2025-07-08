@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pergunta Importante</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ <span id="chamada"></span> ❤️</h1>
+    <p id="resposta" class="mensagem">
+      <div class="botoes">
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+      </div>
+    </p>
+  </div>
+
+  <script>
+    const nome = localStorage.getItem("nome") || "Kédima Franciny";
+    document.getElementById("chamada").innerText = `${nome}, quer namorar comigo?`;
+
+    const simBtn = document.getElementById("sim");
+    const naoBtn = document.getElementById("nao");
+    const resposta = document.getElementById("resposta");
+
+    simBtn.addEventListener("click", () => {
+      resposta.innerHTML = "🎉 Parabéns! Você está namorando o Rairan ❤️";
+    });
+
+    naoBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      naoBtn.style.position = "absolute";
+      naoBtn.style.left = `${x}px`;
+      naoBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>

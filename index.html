@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Convite Especial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Digite seu nome:</h1>
+    <input type="text" id="nome" placeholder="Seu nome aqui" />
+    <button onclick="avancar()">Avançar</button>
+  </div>
+
+  <script>
+    function avancar() {
+      const nome = document.getElementById("nome").value.trim();
+      if (nome.toLowerCase().includes("kédima") || nome.toLowerCase().includes("franciny")) {
+        localStorage.setItem("nome", nome);
+        window.location.href = "pergunta.html";
+      } else {
+        alert("Essa mensagem é só para a Kédima Franciny 😄");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffb6c1, #ffe4e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.botoes {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensagem {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #008000;
+  font-weight: bold;
+}
+
+.mensagem .botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Responsivo */
+@media (min-width: 480px) {
+  .botoes {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  button {
+    min-width: 120px;
+  }
+}
+
+
